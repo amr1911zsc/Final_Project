@@ -1,0 +1,145 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="QTe4d0ImVHZKT3oD13ra">
+    <mxGraphModel dx="1036" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yRvGvosbYE75N1mP6tW7-1" value="Admin" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="150" height="1132" as="geometry" />
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-2" value="Website" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="308" y="20" width="150" height="1132" as="geometry" />
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="614" y="20" width="150" height="1132" as="geometry" />
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-4" value="Add/Edit/Delete Category" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-1" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="248" y="129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-5" value="Update Category Data" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-2" target="yRvGvosbYE75N1mP6tW7-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="183" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-6" value="Confirmation of Category Update" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-3" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="548" y="237" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-7" value="Category Updated Successfully" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-2" target="yRvGvosbYE75N1mP6tW7-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="251" y="291" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-8" value="Notify Website of Changes" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-3" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="548" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-9" value="Add/Edit/Delete Product" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-1" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="248" y="399" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-10" value="Update Product Data" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-2" target="yRvGvosbYE75N1mP6tW7-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="453" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-11" value="Confirmation of Product Update" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-3" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="548" y="507" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-12" value="Product Updated Successfully" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-2" target="yRvGvosbYE75N1mP6tW7-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="251" y="561" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-13" value="Notify Website of Changes" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-3" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="548" y="615" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-14" value="Update Order Status" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-1" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="248" y="669" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-15" value="Update Order Information" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-2" target="yRvGvosbYE75N1mP6tW7-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="723" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-16" value="Order Status Updated" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-3" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="548" y="777" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-17" value="Confirmation of Order Update" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-2" target="yRvGvosbYE75N1mP6tW7-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="251" y="831" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-18" value="View All Orders" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-1" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="248" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-19" value="Fetch Orders" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-2" target="yRvGvosbYE75N1mP6tW7-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="939" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-20" value="Send Order List" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-3" target="yRvGvosbYE75N1mP6tW7-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="548" y="993" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yRvGvosbYE75N1mP6tW7-21" value="Display All Orders" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="yRvGvosbYE75N1mP6tW7-2" target="yRvGvosbYE75N1mP6tW7-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="251" y="1047" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
