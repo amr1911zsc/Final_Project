@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Website</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="products.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!--<div class="overlay" data-overlay></div>
+    <div class="modal" data-modal>
+      <div class="modal-close-overlay" data-modal-overlay></div>
+      <div class="modal-content">
+        <button class="modal-close-btn" data-modal-close>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter-img">
+          <img src="8c2e5c26b4760085e04d2c2bba2dae92.jpg" alt="subscribe newsletter" width="300" height="350">
+        </div>
+        <div class="newsletter">
+          <form id="subscribe-form" action="#" >
+            <div class="newsletter-header">
+  
+              <h3 class="newsletter-title">Subscribe && Enjoy 🩷.</h3>
+  
+              <p class="newsletter-desc">
+                Subscribe the <b>Flower shop</b> to get latest products and discount update.
+              </p>
+  
+            </div>
+  
+            <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+  
+            <button type="submit" class="btn-newsletter">Subscribe</button>
+  
+          </form>
+          <button id="thank-you-btn" style="display:none;">Thank You for Subscribing 🌸</button>
+        </div>
+  
+      </div>-->
+
+  </div>
+
+
+  <div class="notification-toast" data-toast>
+
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="4.jpg" alt="Rose Gold Earrings" width="80" height="70">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Someone in new just bought
+      </p>
+
+      <p class="toast-title">
+        Flowers smells good to our wibsite
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time> ago
+      </p>
+
+    </div>
+
+  </div>
+  <header>
+    <div class="header-main">
+
+      <div class="container">
+        <div class="logo">
+          <h1>flower shop <span>...</span></h1>
+        </div>
+        
+        <!----->
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+        <div id="userNameDisplay" class="user-name-display"></div>
+
+      </div>
+
+    </div>
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category">
+            <a href="#" class="menu-title">Home</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="slider.html" class="menu-title">Categories</a>
+            <div class="dropdown-panel">
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Roses</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Hybrid Tea Rose</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Floribunda Rose</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Grandiflora Rose</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Climbing Rose</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="rose.jpg">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Lilies</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Asiatic Lily</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Oriental Lily</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Trumpet Lily</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Daylily</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="lilies.jpg" alt="Flower sensetive">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Tulips</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Single Early Tulip</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Double Late Tulip</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Parrot Tulip</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Fringed Tulip</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="tulip.jpg" alt="Flower smells">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Daisies</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Shasta Daisy</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Gerbera Daisy</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Oxeye Daisy</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">African Daisy</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="Daisies.jpg" alt="Flower grow quickly">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title"> Orchids</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Phalaenopsis Orchid</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Cattleya Orchid</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Dendrobium Orchid</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Vanda Orchid</a>
+              </li>
+
+            </ul>
+          </li>
+
+
+          <li class="menu-category">
+            <a href="#" class="menu-title"> Hydrangeas</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Bigleaf Hydrangea</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Panicle Hydrangea</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Smooth Hydrangea</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Oakleaf Hydrangea</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Peonies</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Herbaceous Peony</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Tree Peony</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Itoh Peony</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Japanese Peony</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#footer" class="menu-title">Blog</a>
+          </li>
+          <li class="menu-category">
+            <a href="./ai/upload.html" class="menu-title">AI</a>
+          </li>
+          <li class="menu-category">
+  <a href="signin.html" class="menu-title" id="signin-menu"> <p>sign in 🫡</p></a>
+</li>
+
+<li class="menu-category" id="dashboard-menu" style="display:none;">
+  <a href="http://127.0.0.1:5502/admin-site-master/admin.html" class="menu-title" id="signin-menu">
+    <p>Dashboard</p>
+  </a>
+</li>
+
+        </ul>
+      </div>
+
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count" id="cart-count">0</span>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+
+    </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Roses</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Hybrid Tea Rose</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Floribunda Rose</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Grandiflora Rose</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Climbing Rose</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Lilies</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Asiatic Lily</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Oriental Lily</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Trumpet Lily</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Daylily </a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Tulips</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Single Early Tulip</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Double Late Tulip </a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Parrot Tulip</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Fringed Tulip</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Daisies</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Shasta Daisy </a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Gerbera Daisy</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title"> Oxeye Daisy</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title"> African Daisy</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Blog</a>
+        </li>
+
+
+        <li class="menu-category">
+          <a href="upload.html" class="menu-title">AI </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <main>
+    <div class="banner">
+
+      <div class="container">
+
+        <div class="slider-container has-scrollbar">
+
+          <div class="slider-item">
+
+            <img src="home-bg.png" class="banner-img">
+
+            <div class="banner-content">
+
+              <h2 class="banner-title">Flowers's kind</h2>
+            </div>
+
+          </div>
+          <div class="slider-item">
+
+            <img src="1.jpg" class="banner-img">
+
+            <div class="banner-content">
+
+              <h2 class="banner-title">bouqet of flowers </h2>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="category">
+
+      <div class="container">
+
+        <div class="category-item-container has-scrollbar">
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="2611e4d9f09af2117fb7f29bfb5641ca.jpg" width="80">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">SunFlower</h3>
+
+
+              </div>
+
+              <a href="care1.html?category=SunFlower" class="category-btn">Show all</a>
+
+
+
+
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="8b94b3fe7475739dfcbd73021d8d4bdd.jpg" width="60">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Winter flower</h3>
+
+               
+              </div>
+
+              <a href="winter.html?category=Winterflower" class="category-btn">Show all</a>
+
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="glases.jpg" width="60">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Daisy flower</h3>
+
+               
+              </div>
+
+              <a href="glass.html?category=Daisy" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="b82e633cb3b38195ae94ed827e69ddc1.jpg" width="80">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Lavender flower </h3>
+
+              
+              </div>
+
+              <a href="lavander.html?category=Lavender" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="ab434e865038e2d37dabaa95c9e6b495.jpg" width="60">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">yasmeen</h3>
+
+              
+              </div>
+
+              <a href="yasmeen.html?category=yasmeen_flower" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="9f5bb2aa56ee1a9829cf747fb1053f7a.jpg" width="60">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">tulip</h3>
+
+               
+              </div>
+
+              <a href="tulip.html?category=tulip_flower" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        
+      <div class="main-content">
+          <div class="product-main">
+            <h2 class="title">New Products</h2>
+            <div id="product-grid" class="flower-list"></div>
+            <button id="loadMore" class="load-more-btn">Load More</button>
+          </div>
+        
+          <div id="searchResults" class="search-results-container">
+           
+          </div>
+        </div>
+        
+        <div id="cart-items" class="cart">
+          <h2>Cart</h2>
+          <ul id="cart-items-list"></ul>
+          <button id="next-btn">Next</button>
+        </div>
+      
+        
+        
+        
+        
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="blog">
+
+      <div class="container">
+
+        <div class="blog-container has-scrollbar">
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="Y7.jpg" class="blog-banner">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Zinnia</a>
+
+              <a href="#">
+                <h3 class="blog-title">known for its bright, bold colors like red, pink, yellow, and orange.</h3>
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="win6.jpg" class="blog-banner">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Dandelion</a>
+
+              <h3>
+                <a href="#" class="blog-title">It is a climbing rose that adds a beatifull feel to any garden with.</a>
+              </h3>
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="b82e633cb3b38195ae94ed827e69ddc1.jpg" class="blog-banner">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Calliandra </a>
+
+              <h3>
+                <a href="#" class="blog-title"> this bouquet brings a burst of vibrant energy to any room.</a>
+              </h3>
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="cart4.jpg" class="blog-banner">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">white flower</a>
+
+              <h3>
+                <a href="#" class="blog-title"> making them a versatile choice for gardens and weddings.</a>
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer id="footer">
+
+
+
+
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">products</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">kinds</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Bouquets</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">box flower</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link"></a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Products</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Our Company</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Legal Notice</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Terms and conditions</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">About us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Services</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              419 State 414 Rte
+              Beaver Dams, New York(NY), 14812, USA
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">
+        Copyright &copy; <a href="#">Anon</a> all rights reserved.
+      </p>
+
+    </div>
+    </div>
+  </footer>
+  <script src="signin.js"></script>
+  <script src="products.js"></script>
+  
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+</body>

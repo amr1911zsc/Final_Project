@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <h1>Your Cart</h1>
+  <div id="checkout-items" class="cart-container"></div>
+
+  <h2 id="total-price">Total: $0</h2>
+
+  <button id="checkout">Checkout</button>
+
+  <div class="checkout-form" id="checkout-form" style="display: none;">
+    <input type="text" id="location" placeholder="Enter your location" />
+    <button id="done-btn">Done</button>
+  </div>
+
+  <button id="cancel-order" style="display: none;">Cancel Order</button>
+
+  <a id="home-link" href="products.html">
+  ← Back to Home
+</a>
+  <script src="checkout.js"></script>
+</body>
+</html>

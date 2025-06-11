@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f3f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #c14578;
+        }
+
+        section {
+            margin: 40px auto;
+            max-width: 1000px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #c14578;
+            color: white;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #c14578;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #a43864;
+        }
+
+        .response {
+            background-color: #ffeef3;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Orders List -->
+    <section>
+        <h1>Orders List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    <th>Address</th>
+                    <th>Delivery Date</th>
+                    <th>User ID</th>
+                    <th>Payment Method</th>
+                </tr>
+            </thead>
+            <tbody id="ordersTableBody"></tbody>
+        </table>
+    </section>
+
+    <!-- Get Order By ID -->
+    <section>
+        <h2>Get Order By ID</h2>
+        <input type="number" id="orderIdInput" placeholder="Enter Order ID">
+        <button onclick="getOrder()">Fetch Order</button>
+        <div id="orderDetails" class="response"></div>
+    </section>
+
+    <!-- Update Order Status -->
+    <section>
+        <h2>Update Order Status</h2>
+        <input type="number" id="updateOrderId" placeholder="Order ID">
+        <input type="text" id="updateOrderStatus" placeholder="New Status">
+        <input type="datetime-local" id="updateDeliveryDate">
+        <button onclick="updateStatus()">Update</button>
+        <div id="updateResponse" class="response" style="display: none;"></div>
+    </section>
+
+    <script>
+        // Get All Orders
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("http://localhost:7219/api/Order/GetOrders")
+                .then(res => res.json())
+                .then(data => {
+                    const tableBody = document.getElementById("ordersTableBody");
+                    data.forEach(order => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${order.orderId}</td>
+                            <td>${order.orderDate ? new Date(order.orderDate).toLocaleDateString() : "N/A"}</td>
+                            <td>${order.totalPrice} EGP</td>
+                            <td>${order.orderStatus}</td>
+                            <td>${order.deliveryLocation ?? "N/A"}</td>
+                            <td>${order.deliveryDate ? new Date(order.deliveryDate).toLocaleDateString() : "N/A"}</td>
+                            <td>${order.userId}</td>
+                            <td>${order.paymentMethod}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(err => console.error("Error loading orders:", err));
+        });
+
+        // Get Order By ID
+        async function getOrder() {
+            const orderId = document.getElementById("orderIdInput").value;
+            const response = await fetch(`http://localhost:7219/api/Order/GetOrderById/${orderId}`);
+
+            const container = document.getElementById("orderDetails");
+            container.innerHTML = "";
+
+            if (!response.ok) {
+                container.innerHTML = `<p style="color: crimson;">Order not found.</p>`;
+                return;
+            }
+
+            const order = await response.json();
+            container.innerHTML = `
+                <strong>Order ID:</strong> ${order.orderId}<br>
+                <strong>Date:</strong> ${new Date(order.orderDate).toLocaleString()}<br>
+                <strong>Total Price:</strong> ${order.totalPrice} EGP<br>
+                <strong>Status:</strong> ${order.orderStatus}<br>
+                <strong>Payment:</strong> ${order.paymentMethod}<br>
+                <strong>Delivery:</strong> ${order.deliveryLocation}<br>
+                <strong>Delivery Date:</strong> ${order.deliveryDate ?? 'Not Set'}<br>
+                <strong>User ID:</strong> ${order.userId}<br>
+            `;
+        }
+
+        // Update Order Status
+        async function updateStatus() {
+            const id = document.getElementById("updateOrderId").value;
+            const status = document.getElementById("updateOrderStatus").value;
+            const deliveryDate = document.getElementById("updateDeliveryDate").value;
+
+            const payload = {
+                OrderStatus: status,
+                DeliveryDate: deliveryDate || null
+            };
+
+            const response = await fetch(`http://localhost:7219/api/Order/UpdateOrderStatus/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+
+            const resBox = document.getElementById("updateResponse");
+            resBox.style.display = "block";
+            resBox.innerHTML = `<strong>Message:</strong> ${result.message}`;
+        }
+    </script>
+</body>
+</html>

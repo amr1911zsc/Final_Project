@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="admin.css">
+	<title>AdminSite</title>
+</head>
+<body>
+	
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand"><i class='bx bxs-smile icon'></i> AdminSite</a>
+		<ul class="side-menu">
+			<li><a href="#" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
+			<li class="divider" data-text="main">Main</li>
+			<li>
+				<a href="#"><i class='bx bxs-category icon'></i> categories <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">getAll</a></li>
+					<li><a href="#">Add</a></li>
+					<li><a href="#">Remove</a></li>
+					<li><a href="#">Update</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class='bx bxs-package icon'></i> products <i class='bx bx-chevron-right icon-right'></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#" onclick="showForm('getID')">product ID</a></li>
+					<li><a href="#" onclick="showForm('add')">Add</a></li>
+					<li><a href="#" onclick="showForm('remove')">Remove</a></li>
+					<li><a href="#" onclick="showForm('update')">Update</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class='bx bxs-cart-alt icon'></i> order <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">getAll</a></li>
+					<li><a href="#">getAll ID</a></li>
+					<li><a href="#">statues</a></li>
+					<li><a href="#">Radio</a></li>
+				</ul>
+			</li>
+			<li><a href="registerAdmin.html"><i class='bx bx-log-in icon' ></i> Register New Admin </a></li>
+		</ul>
+		<a href="http://127.0.0.1:5501/products.html" class="home">Back to home</a>
+	</section>
+	<section id="content">
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<span class="divider"></span>
+			<span id="adminNameDisplay"></span>
+
+		</nav>
+		<main>
+			<div id="main-content">
+				<div class="info-data">
+					<div class="card">
+						<div class="head">
+							<div>
+								<h2 id="deliveredCount">0</h2>
+								<p>Orders Delivered</p>
+							</div>
+							<i class='bx bx-trending-up icon' ></i>
+						</div>
+					</div>
+		
+					<div class="card">
+						<div class="head">
+							<div>
+								<h2 id="pendingCount">0</h2>
+								<p>Orders Pending</p>
+							</div>
+							<i class='bx bx-trending-up icon' ></i>
+						</div>
+					</div>
+		
+					<div class="card">
+						<div class="head">
+							<div>
+								<h2 id="totalOrdersCount">0</h2>
+								<p>Total Orders</p>
+							</div>
+							<i class='bx bx-trending-up icon' ></i>
+						</div>
+					</div>
+		
+					<div class="card">
+						<div class="head">
+							<div>
+								<h2 id="usersCount">0</h2>
+								<p>Registered Users</p>
+							</div>
+							<i class='bx bx-trending-up icon' ></i>
+						</div>
+					</div>
+		
+				</div>
+			</div>
+		</main>
+
+			<div class="section-divider">
+				<span>Categories Section</span>
+			  </div>
+			  
+<h2 onclick="toggleForm('getAllCategoriesForm')">Get All Categories</h2>
+<div id="getAllCategoriesForm" class="form-section" style="display: none;">
+	<button onclick="getAllCategories()">Get All Categories</button>
+    <ul id="categoryList"></ul>
+</div>
+
+<!-- Add Category -->
+<h2 onclick="toggleForm('addCategoryForm')">Add Category</h2>
+<div id="addCategoryForm" class="form-section" style="display: none;">
+  <form onsubmit="addCategory(event)">
+    <label for="categoryName">Category Name:</label>
+    <input type="text" id="categoryName" required />
+    <button type="submit">Add</button>
+  </form>
+</div>
+
+<!-- Remove Category -->
+<h2 onclick="toggleForm('deleteCategoryForm')">Delete Category</h2>
+<div id="deleteCategoryForm" class="form-section" style="display: none;">
+  <label for="categoryIdToDelete">Category ID:</label>
+  <input type="number" id="categoryIdToDelete" />
+  <button onclick="deleteCategory()">Delete</button>
+</div>
+
+<!-- Update Category -->
+<h2 onclick="toggleForm('updateCategoryForm')">Update Category</h2>
+<div id="updateCategoryForm" class="form-section" style="display: none;">
+  <label for="categoryIdToUpdate">Category ID:</label>
+  <input type="number" id="categoryIdToUpdate" />
+
+  <label for="newCategoryName">New Name:</label>
+  <input type="text" id="newCategoryName" />
+
+  <button onclick="updateCategory()">Update</button>
+</div>
+  
+<div class="section-divider">
+	<span>products Section</span>
+  </div>
+  
+
+
+			<div class="container">
+				<h2 onclick="toggleForm('form-search')">Search Product by ID</h2>
+				<div id="form-search" style="display: none;">
+					<label for="productIdInput">Enter Product ID:</label>
+					<input type="number" id="productIdInput" placeholder="e.g. 1" />
+					<button onclick="fetchProduct()">Search</button>
+			
+					<div id="productDetails" style="display: none;">
+						<img id="productImage" src="" alt="Product Image" />
+						<div class="info">
+							<p><strong>Name:</strong> <span id="productName"></span></p>
+							<p><strong>Type:</strong> <span id="productType"></span></p>
+							<p><strong>Price:</strong> $<span id="productPrice"></span></p>
+							<p><strong>Quantity:</strong> <span id="productQty"></span></p>
+						</div>
+					</div>
+				</div>
+			
+				<h2 onclick="toggleForm('form-add')">Add New Product</h2>
+				<div id="form-add" style="display: none;">
+					<form id="productForm" enctype="multipart/form-data" onsubmit="submitProduct(event)">
+						<label for="name">Product Name:</label>
+						<input type="text" name="name" id="name" required>
+					
+						<label for="quantity">Quantity:</label>
+						<input type="number" name="quantity" id="quantity" required>
+					
+						<label for="price">Price:</label>
+						<input type="number" name="price" id="price" required>
+					
+						<label for="type">Type:</label>
+						<input type="text" name="type" id="type" required>
+					
+						<label for="catgyId">Category ID:</label>
+						<input type="number" name="catgyId" id="catgyId" required>
+					
+						<h4>Description Details:</h4>
+					
+						<label for="care">Care:</label>
+						<input type="text" id="care" required>
+					
+						<label for="season">Season:</label>
+						<input type="text" id="season" required>
+					
+						<label for="sunlight">Sunlight:</label>
+						<input type="text" id="sunlight" required>
+					
+						<label for="soil">Soil:</label>
+						<input type="text" id="soil" required>
+					
+						<label for="imageFile">Upload Image:</label>
+						<input type="file" name="imageFile" id="imageFile" accept="image/*">
+					
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			
+				<h2 onclick="toggleForm('form-delete')">Delete Product</h2>
+				<div id="form-delete" style="display: none;">
+					<label for="productId">Product ID</label>
+					<input type="number" id="productId" />
+					<button onclick="deleteProduct()">Delete Product</button>
+				</div>
+			
+				<h2 onclick="toggleForm('form-update')">Update Product</h2>
+				<div id="form-update" style="display: none;">
+				  <label for="updateProductId">Product ID</label>
+				  <input type="number" id="updateProductId" required/>
+				
+				  <label for="updatePrice">New Price</label>
+				  <input type="number" id="updatePrice" required/>
+				
+				  <label for="updateQuantity">New Quantity</label>
+				  <input type="number" id="updateQuantity" required/>
+				
+				  <label for="updateImage">New Image</label>
+				  <input type="file" id="updateImage" />
+				
+				  <button id="updateProductBtn">Update Product</button>
+				</div>
+				
+			
+			
+				<!--
+				<h2 onclick="toggleForm('form-update')">Update Product</h2>
+				<div id="form-update" style="display: none;">
+					<label for="updateProductId">Product ID</label>
+					<input type="number" id="updateProductId" />
+			
+					<label for="updatePrice">New Price</label>
+					<input type="number" id="updatePrice" />
+			
+					<label for="updateQuantity">New Quantity</label>
+					<input type="number" id="updateQuantity" />
+			
+					<label for="updateImage">New Image</label>
+					<input type="file" id="updateImage" />
+			
+					<button onclick="updateProduct()">Update Product</button>
+				</div>
+			-->
+			</div>
+			
+			<div class="section-divider">
+				<span>role Section</span>
+			  </div> 
+
+			  <div class="container">
+				<label for="roleName" onclick="toggleForm('createRoleForm')" style="cursor: pointer; font-weight: bold;">👩‍💻 Role Name</label>
+			  
+				<form id="createRoleForm" onsubmit="submitRole(event)" style="display: none; margin-top: 10px;">
+				  <input type="text" id="roleName" name="roleName" required />
+				  <button type="submit">Create Role</button>
+				</form>
+				
+				<!-- Div to display messages -->
+				<div id="message" style="display: none;"></div>
+			  </div>
+			  
+			  <div class="section-divider">
+				<span>order Section</span>
+			  </div> 
+
+			  <section>
+				<h2 onclick="toggleSection(this)">Get Order By ID</h2>
+				<div class="content hidden">
+				  <input type="number" id="orderIdInput" placeholder="Enter Order ID">
+				  <button onclick="getOrder()">Fetch Order</button>
+				  <div id="orderDetails" class="response"></div>
+				</div>
+			  </section>
+			
+			  <!-- Update Order Status -->
+			  <section>
+				<h2 onclick="toggleSection(this)">Update Order Status</h2>
+				<div class="content hidden">
+				  <input type="number" id="updateOrderId" placeholder="Order ID">
+				  <input type="text" id="updateOrderStatus" placeholder="New Status">
+				  <input type="datetime-local" id="updateDeliveryDate">
+				  <button onclick="updateStatus()">Update</button>
+				  <div id="updateResponse" class="response" style="display: none;"></div>
+				</div>
+			  </section>
+
+			  
+			<section>
+			<h2 onclick="toggleSection(this)">Get All Orders</h2>
+			<div class="content hidden">
+				<button onclick="getAllOrders()">Fetch All Orders</button>
+				<div id="allOrders" class="response"></div>
+			</div>
+			</section>
+
+
+
+
+
+
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="./../../products/signin.js"></script>
+	<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: palevioletred;
+}
+.cart-container {
+  width: 50%;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+.item {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: rgb(94, 80, 85);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* السعر الإجمالي */
+#total-price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: palevioletred;
+}
+
+/* أزرار الإجراءات */
+.actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* تصميم الأزرار العامة */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+#checkout{
+  background-color: #1d672e;
+  margin-top: 20px;
+}
+
+#checkout{
+  background-color: #218838;
+}
+
+/* زر الإلغاء */
+#cancel-order {
+  background-color: #c0525d;
+  margin-top: 30px;
+}
+
+#cancel-order:hover {
+  background-color: #c82333;
+}
+.checkout-form {
+  margin-top: 30px;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  color: palevioletred;
+}
+
+/* الحقول داخل الفورم */
+.checkout-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#home-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  color: palevioletred;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+#home-link:hover {
+  background-color: #e2e6ea;
+}
+#done-btn {
+  background-color: #28a745; /* أخضر */
+  color: white;              /* لون الخط */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#done-btn:hover {
+  background-color: #218838; /* لون أغمق عند التحويم */
+}
